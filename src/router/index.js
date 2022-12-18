@@ -22,19 +22,27 @@ const routes = [
   {
     path: '/category1',
     name: 'category1',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "category1" */ '../views/category1/index.vue'),
 
     children: [
       {
         path: 'category1menu1',
         name: 'category1-Menu1',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
         component: () => import(/* webpackChunkName: "category1" */ '../views/category1/Category1Menu1.vue'),
+      },
+    ],
+  },
+
+  {
+    path: '/category2',
+    name: 'category2',
+    component: () => import(/* webpackChunkName: "category2" */ '../views/category2/index.vue'),
+
+    children: [
+      {
+        path: 'category2menu1',
+        name: 'category2-Menu1',
+        component: () => import(/* webpackChunkName: "category2" */ '../views/category2/Category2Menu1.vue'),
       },
     ],
   },
